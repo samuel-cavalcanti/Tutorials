@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://samuel-cavalcanti.github.io/Tutorials/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>  | Tutorial OpenMP </title>
+</head>
+<body>
+
+<main>
+    
+    <nav>
+            <a href="https:&#x2F;&#x2F;samuel-cavalcanti.github.io&#x2F;Tutorials&#x2F;">
+                        <img src="https://samuel-cavalcanti.github.io/Tutorials/npad_logo.png" alt="logo"/>
+                    </a>
+                <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="avancado"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="avancado">avançado</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/tch-rs-tutorial/">tch-rs-example NMIST</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/openmp-tutorial/">Tutorial OpenMP</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/mpi-tutorial/">Tutorial MPI</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="iniciante"
+                           />
+                    <label class="tree-toggle-label"
+                           for="iniciante">iniciante</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/winscp-tutorial/">Copiando Arquivos através de uma Interface gráfica WinSCP (Windows)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/ssh-tutorial/">Geração de chave SSH pública</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/putty-tutorial/">PuTTy tutoriais</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/rsync-tutorial/">rsync</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/scp-tutorial/">scp</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/superpc-introduction-part-2/">Tutorial Introdução ao Supercomputador - Parte 2</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/superpc-introduction-part-1/">Tutorial Introdução ao Supercomputador parte 1</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/gnome-files/">Copiando Arquivos através de uma Interface gráfica Gnome Files (linux)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/mobaxterm-tutorial/">MobaXterm Tutoriais</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="intermediario"
+                           />
+                    <label class="tree-toggle-label"
+                           for="intermediario">intermediário</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/intermediate/slurm-commands/">Tutorial de comandos do supercomputador</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/intermediate/superpc-introduction-part-3/">Tutorial Introdução ao Supercomputador - Parte 3</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/intermediate/install-apps/">Tutorial de instalação de programas no supercomputador</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <h1 id="tutorial-openmp">Tutorial OpenMP</h1>
+<p>Veremos neste tutorial como executar um job contendo códigos escritos com OpenMP no supercomputador. OpenMP é um modelo de programação paralela para sistemas de memória compartilhada. Nesse modelo, o programa cria diversas threads que são coordenadas por um thread mestre. O programador define algumas seções do código como paralelas utilizando diretivas de preprocessamento específicas.</p>
+<p>Os nós do supercomputador não compartilham memória. Por isso, não é possível executar em mais de um nó um job que utiliza somente OpenMP como ferramenta de programação parelela. Contudo, um programa escrito com OpenMP pode ser executado em múltiplos cores em um mesmo nó. Para que um job seja executado em vários nós, deve-se utilizar um modelo de programçáo paralela para sistemas de memória distribuída (e.g. MPI). Também é possível utilizar OpenMP e MPI em um mesmo código.</p>
+<h2 id="exemplo-hello-world">Exemplo: Hello World</h2>
+<pre data-lang="c" style="background-color:#eff1f5;color:#4f5b66;" class="language-c "><code class="language-c" data-lang="c"><span style="color:#a7adba;">//Arquivo hello_openmp.c 
+</span><span style="color:#b48ead;">#include </span><span>&lt;</span><span style="color:#a3be8c;">omp.h</span><span>&gt; 
+</span><span style="color:#b48ead;">#include </span><span>&lt;</span><span style="color:#a3be8c;">stdio.h</span><span>&gt;
+</span><span style="color:#b48ead;">int </span><span style="color:#8fa1b3;">main </span><span>(</span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">argc</span><span>, </span><span style="color:#b48ead;">char </span><span>*</span><span style="color:#bf616a;">argv</span><span>[]) 
+</span><span>{ 
+</span><span> </span><span style="color:#b48ead;">int</span><span> nthreads, thread_id; 
+</span><span> </span><span style="color:#b48ead;">#pragma</span><span> omp parallel private(nthreads, thread_id) 
+</span><span> { 
+</span><span>  thread_id = </span><span style="color:#bf616a;">omp_get_thread_num</span><span>();
+</span><span>  </span><span style="color:#96b5b4;">printf</span><span>(&quot;</span><span style="color:#a3be8c;">Thread </span><span style="color:#d08770;">%d</span><span style="color:#a3be8c;"> says: Hello World</span><span style="color:#96b5b4;">\n</span><span>&quot;, thread_id); 
+</span><span>  </span><span style="color:#b48ead;">if </span><span>(thread_id == </span><span style="color:#d08770;">0</span><span>)
+</span><span>  { 
+</span><span>   nthreads = </span><span style="color:#bf616a;">omp_get_num_threads</span><span>();
+</span><span>   </span><span style="color:#96b5b4;">printf</span><span>(&quot;</span><span style="color:#a3be8c;">Thread </span><span style="color:#d08770;">%d</span><span style="color:#a3be8c;"> reports: the number of threads are </span><span style="color:#d08770;">%d</span><span style="color:#96b5b4;">\n</span><span>&quot;, thread_id, nthreads); 
+</span><span>  } 
+</span><span> } 
+</span><span> </span><span style="color:#b48ead;">return </span><span style="color:#d08770;">0</span><span>; 
+</span><span>}
+</span></code></pre>
+<p>Em seguida, é necessário escrever um script para executar o programa.</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#a7adba;">#!/bin/bash 
+</span><span style="color:#a7adba;">#SBATCH --job-name=OMP_hello 
+</span><span style="color:#a7adba;">#SBATCH --time=0-0:5
+</span><span style="color:#a7adba;">#SBATCH --cpus-per-task=8
+</span><span style="color:#a7adba;">#SBATCH --hint=compute_bound
+</span><span style="color:#b48ead;">export </span><span style="color:#bf616a;">OMP_NUM_THREADS</span><span>=</span><span style="color:#a3be8c;">32
+</span><span>
+</span><span style="color:#bf616a;">./hello_openmp
+</span></code></pre>
+<p>A descrição dos valores dos campos do script é informada abaixo:</p>
+<p>job-name: Nome que aparecerá na fila de jobs
+time: Tempo máximo para execução do job (neste exemplo = 5 min). Caso o job ainda não tenha terminado, após esse tempo ele será cancelado. Formato: dias-horas:minutos.</p>
+<p>Note a configuração da variável de ambiente <code>OMP_NUM_THREADS</code> para 32. Isso controla quantas threads serão utilizadas nos jobs que usam OpenMP. Configurar essa variável para um número maior que 32 provavelmente não irá melhorar o desempenho do programa uma vez que cada nó do supercomputador possui 32 cores.</p>
+<h2 id="submissao-de-um-job">Submissão de um job</h2>
+<p>Para enviar arquivos para o supercomputador recomenda-se utilizar o comando rsync.</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">aluno@ubuntu:~</span><span> $  rsync</span><span style="color:#bf616a;"> -azP -e </span><span>&quot;</span><span style="color:#a3be8c;">ssh -p 4422</span><span>&quot; </span><span style="color:#bf616a;">~</span><span>/pastaLocal/{hello_openmp.c,run.slurm} seuUsuario@sc2.npad.ufrn.brr:</span><span style="color:#bf616a;">~</span><span>/pastaRemota
+</span></code></pre>
+<p>O acesso ao supercomputador pode ser feito através do protocolo SSH (Secure Shell).</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">aluno@ubuntu:~</span><span> $  ssh</span><span style="color:#bf616a;"> -p4422</span><span> nome_do_usuario@sc2.npad.ufrn.brr
+</span></code></pre>
+<p>Em seguida, acesse a pasta onde estão o código fonte em OpenMP e o script de execução.</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">[seuUsuario@service0 ~</span><span>]$ cd pastaRemota/
+</span></code></pre>
+<p>Compile o código fonte com a flag de otimização &quot;-O_&quot; desejada. No exemplo abaixo, é utilizada a flag -O2 (a flag é habilitada pela letra &quot;O&quot; e não o número &quot;0&quot;).</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">[seuUsuario@service0 ~</span><span>]$ icc</span><span style="color:#bf616a;"> -O2</span><span> hello_openmp.c</span><span style="color:#bf616a;"> -o</span><span> hello_openmp</span><span style="color:#bf616a;"> -openmp
+</span></code></pre>
+<h3 id="flags-de-otimizacao">Flags de otimização</h3>
+<ul>
+<li>
+<p><strong>-O0</strong> Desabilita todas as otimizações.</p>
+</li>
+<li>
+<p><strong>-O1</strong> Habilita otimização para melhorar velocidade, entretanto desabilita  algumas otimizações que aumentam o tamanho do código e afetam a velocidade.</p>
+</li>
+<li>
+<p><strong>-O2</strong> Habilita otimização para melhorar velocidade. Esse é o nível de otimização normalente recomendável e padrão para o icc. Vetorização é habilitada em O2 e níveis maiores.</p>
+</li>
+<li>
+<p><strong>-O3</strong> Realiza otimizações O2 e habilita transformações de loop mais agressivos. Essas otimizações podem deixar o código mais lento em alguns casos quando comparados a O2. A opção O3 é recomendada para aplicações que têm loops que utilizam fortemente cálculos de ponto flutante e processam grandes conjuntos de dados.</p>
+</li>
+</ul>
+<p>Quanto maior o nível de otimização, mais liberdade o compilador terá para fazer suposições sobre o seu código, podendo produzir resultados indesejados.</p>
+<p>Submeta o job.</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">[seuUsuario@service0 ~</span><span>]$ sbatch run.slurm
+</span></code></pre>
+<p>O job entrará em uma fila para ser executado. Quando isso acontecer, será possível verificar as saídas que foram salvas nos arquivos configurados nas tags &quot;--output&quot; e &quot;--error&quot;.</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">[seuUsuario@service0 ~</span><span>]$ cat slurm.out
+</span><span>
+</span><span>  </span><span style="color:#bf616a;">Thread</span><span> 0 says: Hello Word!
+</span><span>
+</span><span>  </span><span style="color:#bf616a;">Thread</span><span> 0 reports: the number of threads are 8
+</span><span>
+</span><span>  </span><span style="color:#bf616a;">Thread</span><span> 7 says: Hello Word!
+</span><span>
+</span><span>  </span><span style="color:#bf616a;">Thread</span><span> 4 says: Hello Word!
+</span><span>
+</span><span>  </span><span style="color:#bf616a;">Thread</span><span> 6 says: Hello Word!
+</span><span>
+</span><span>  </span><span style="color:#bf616a;">Thread</span><span> 1 says: Hello Word!
+</span><span>
+</span><span>  </span><span style="color:#bf616a;">Thread</span><span> 3 says: Hello Word!
+</span><span>
+</span><span>  </span><span style="color:#bf616a;">Thread</span><span> 5 says: Hello Word!
+</span><span>
+</span><span>  </span><span style="color:#bf616a;">Thread</span><span> 2 says: Hello Word!
+</span></code></pre>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="https://samuel-cavalcanti.github.io/Tutorials/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="https://samuel-cavalcanti.github.io/Tutorials/search_index.en.js" defer></script>
+<script type="text/javascript" src="https://samuel-cavalcanti.github.io/Tutorials/js.js" defer></script>
+
+</body>
+</html>

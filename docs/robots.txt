@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Allow: /
+Sitemap: https://samuel-cavalcanti.github.io/Tutorials/sitemap.xml
