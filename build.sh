@@ -1,6 +1,8 @@
 
 git checkout gh-pages
 
+git git submodule update
+
 pip install -r requirements.txt
 
 git clone https://github.com/samuel-cavalcanti/Tutorials.git
