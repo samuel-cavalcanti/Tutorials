@@ -16,36 +16,13 @@
                     </a>
                 <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
             <div id="trees">
-                <input class="tree-toggle" type="checkbox" id="avancado"
-                           />
-                    <label class="tree-toggle-label"
-                           for="avancado">avançado</label>
-
-                    <ul class="subtree">
-                        <li >
-                                <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/openmp-tutorial/">Tutorial OpenMP</a>
-                            </li>
-
-                            <li >
-                                <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/tch-rs-tutorial/">tch-rs-example NMIST</a>
-                            </li>
-
-                            <li >
-                                <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/mpi-tutorial/">Tutorial MPI</a>
-                            </li>
-
-                            </ul>
                 <input class="tree-toggle" type="checkbox" id="intermediario"
                            checked/>
                     <label class="tree-toggle-label"
                            for="intermediario">intermediário</label>
 
                     <ul class="subtree">
-                        <li >
-                                <a href="https://samuel-cavalcanti.github.io/Tutorials/intermediate/install-apps/">Tutorial de instalação de programas no supercomputador</a>
-                            </li>
-
-                            <li class="active">
+                        <li class="active">
                                 <a href="https://samuel-cavalcanti.github.io/Tutorials/intermediate/superpc-introduction-part-3/">Tutorial Introdução ao Supercomputador - Parte 3</a>
                             </li>
 
@@ -96,6 +73,10 @@
                                 <a href="https://samuel-cavalcanti.github.io/Tutorials/intermediate/slurm-commands/">Tutorial de comandos do supercomputador</a>
                             </li>
 
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/intermediate/install-apps/">Tutorial de instalação de programas no supercomputador</a>
+                            </li>
+
                             </ul>
                 <input class="tree-toggle" type="checkbox" id="iniciante"
                            />
@@ -104,6 +85,14 @@
 
                     <ul class="subtree">
                         <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/putty-tutorial/">PuTTy tutoriais</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/ssh-tutorial/">Geração de chave SSH pública</a>
+                            </li>
+
+                            <li >
                                 <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/rsync-tutorial/">rsync</a>
                             </li>
 
@@ -112,19 +101,7 @@
                             </li>
 
                             <li >
-                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/scp-tutorial/">scp</a>
-                            </li>
-
-                            <li >
-                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/ssh-tutorial/">Geração de chave SSH pública</a>
-                            </li>
-
-                            <li >
                                 <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/mobaxterm-tutorial/">MobaXterm Tutoriais</a>
-                            </li>
-
-                            <li >
-                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/winscp-tutorial/">Copiando Arquivos através de uma Interface gráfica WinSCP (Windows)</a>
                             </li>
 
                             <li >
@@ -132,11 +109,34 @@
                             </li>
 
                             <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/winscp-tutorial/">Copiando Arquivos através de uma Interface gráfica WinSCP (Windows)</a>
+                            </li>
+
+                            <li >
                                 <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/gnome-files/">Copiando Arquivos através de uma Interface gráfica Gnome Files (linux)</a>
                             </li>
 
                             <li >
-                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/putty-tutorial/">PuTTy tutoriais</a>
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/scp-tutorial/">scp</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="avancado"
+                           />
+                    <label class="tree-toggle-label"
+                           for="avancado">avançado</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/mpi-tutorial/">Tutorial MPI</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/tch-rs-tutorial/">tch-rs-example NMIST</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/openmp-tutorial/">Tutorial OpenMP</a>
                             </li>
 
                             </ul>
@@ -231,7 +231,6 @@
 </span><span> </span><span style="color:#a7adba;">#SBATCH --qos=qos2
 </span><span>
 </span><span> </span><span style="color:#bf616a;">./prog1
-</span><span>
 </span></code></pre>
 <h3 id="preempt">preempt</h3>
 <p>Para trabalhos que necessitem rodar vários jobs simultaneamente , ou job que precisa de mais de até 20 dias para ser executado. Recomenda-se utilizar preempt, nele o usuário pode deixar rodando até 100 jobs simultâneos. No entanto, por falta de recurso o seus jobs poderão ser cancelados a qualquer momento. Ex:</p>
@@ -243,7 +242,6 @@
 </span><span> </span><span style="color:#a7adba;">#SBATCH --qos=preempt
 </span><span>
 </span><span> </span><span style="color:#bf616a;">./prog1
-</span><span>
 </span></code></pre>
 <h2 id="receber-e-mails-sobre-inicio-e-fim-da-execucao">Receber e-mails sobre início e fim da execução</h2>
 <p>Caso deseje receber notificações por e-mail sobre início e fim de execução, utiliza-se a opção <strong>--mail-type</strong> onde se pode definir que tipo de notificação deseja receber. Se for definido <code>ALL</code>, as notificações recebidas serão sobre <code>BEGIN</code>, <code>END</code>, <code>FAIL</code>, <code>REQUEUE</code> e <code>STAGE_OUT</code>. Caso deseje apenas um evento específico utilize uma das opções, sendo as opções disponíveis: <code>NONE</code>, <code>BEGIN</code>, <code>END</code>, <code>FAIL</code>, <code>REQUEUE</code>, <code>STAGE_OUT</code>, <code>TIME_LITMIT</code>, <code>TIME_LIMIT_90</code> (alcançou 90% do tempo limite), <code>TIME_LIMIT_50</code> e <code>ARRAY_TASKS</code> (enviar e-mail para cada array task).</p>
@@ -333,7 +331,6 @@
 <p>O tempo de início esperado depende da finalização dos jobs em execução e o tempo limite de execução depende da opção <strong>--time</strong> no script do job. Logo, uma escolha razoável do tempo estimado de execução pode fazer com que o job comece a executar mais rápido. Ex.:</p>
 <pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span> </span><span style="color:#a7adba;">#!/bin/bash
 </span><span style="color:#a7adba;">#SBATCH --time=0-0:5 #Formato padrão: dias-horas:minutos
-</span><span>
 </span></code></pre>
 <p>Para executar programas em paralelo no supercomputador, leia os tutorias de <a href="/advanced/openmp_tutorial.md">OpenMP</a> e <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/mpi-tutorial/">MPI</a>.</p>
 
