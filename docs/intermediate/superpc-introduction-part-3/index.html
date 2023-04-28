@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://samuel-cavalcanti.github.io/Tutorials/main.css">
+    <link rel="icon" href="https://samuel-cavalcanti.github.io/Tutorials/npad.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>  | Tutorial Introdução ao Supercomputador - Parte 3 </title>
 </head>
@@ -23,15 +24,15 @@
 
                     <ul class="subtree">
                         <li >
-                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/putty-tutorial/">PuTTy tutoriais</a>
-                            </li>
-
-                            <li >
                                 <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/rsync-tutorial/">rsync</a>
                             </li>
 
                             <li >
-                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/scp-tutorial/">scp</a>
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/superpc-introduction-part-1/">Tutorial Introdução ao Supercomputador parte 1</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/winscp-tutorial/">Copiando Arquivos através de uma Interface gráfica WinSCP (Windows)</a>
                             </li>
 
                             <li >
@@ -43,19 +44,19 @@
                             </li>
 
                             <li >
-                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/mobaxterm-tutorial/">MobaXterm Tutoriais</a>
-                            </li>
-
-                            <li >
                                 <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/ssh-tutorial/">Geração de chave SSH pública</a>
                             </li>
 
                             <li >
-                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/superpc-introduction-part-1/">Tutorial Introdução ao Supercomputador parte 1</a>
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/scp-tutorial/">scp</a>
                             </li>
 
                             <li >
-                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/winscp-tutorial/">Copiando Arquivos através de uma Interface gráfica WinSCP (Windows)</a>
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/putty-tutorial/">PuTTy tutoriais</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/mobaxterm-tutorial/">MobaXterm Tutoriais</a>
                             </li>
 
                             </ul>
@@ -132,11 +133,11 @@
                                                     </li>
                                             </ul>
                                     <li >
-                                <a href="https://samuel-cavalcanti.github.io/Tutorials/intermediate/slurm-commands/">Tutorial de comandos do supercomputador</a>
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/intermediate/install-apps/">Tutorial de instalação de programas no supercomputador</a>
                             </li>
 
                             <li >
-                                <a href="https://samuel-cavalcanti.github.io/Tutorials/intermediate/install-apps/">Tutorial de instalação de programas no supercomputador</a>
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/intermediate/slurm-commands/">Tutorial de comandos do supercomputador</a>
                             </li>
 
                             </ul>
@@ -225,9 +226,6 @@
 <p>O QOS 2 é mais indicado para mais jobs que utilizam um nó inteiro ou jobs que utilizam alguns poucos nós. Com ele, o usuário poderá colocar 100 jobs na fila, mas apenas <strong>1 job</strong> em execução  com até 256 núcleos físicos (4 nós completos) em utilização, o que ocorrer primeiro. Tendo o job o limite de tempo de até <strong>7 dias</strong> Ex.:</p>
 <pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span> </span><span style="color:#a7adba;">#!/bin/bash
 </span><span> </span><span style="color:#a7adba;">#SBATCH --time=0-0:5
-</span><span> </span><span style="color:#a7adba;">#SBATCH --cpus-per-task=32
-</span><span> </span><span style="color:#a7adba;">#SBATCH --hint=compute_bound
-</span><span> </span><span style="color:#a7adba;">#SBATCH --exclusive
 </span><span> </span><span style="color:#a7adba;">#SBATCH --qos=qos2
 </span><span>
 </span><span> </span><span style="color:#bf616a;">./prog1
@@ -236,9 +234,6 @@
 <p>Para trabalhos que necessitem rodar vários jobs simultaneamente , ou job que precisa de mais de até 20 dias para ser executado. Recomenda-se utilizar preempt, nele o usuário pode deixar rodando até 100 jobs simultâneos. No entanto, por falta de recurso o seus jobs poderão ser cancelados a qualquer momento. Ex:</p>
 <pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span> </span><span style="color:#a7adba;">#!/bin/bash
 </span><span> </span><span style="color:#a7adba;">#SBATCH --time=0-0:5
-</span><span> </span><span style="color:#a7adba;">#SBATCH --cpus-per-task=32
-</span><span> </span><span style="color:#a7adba;">#SBATCH --hint=compute_bound
-</span><span> </span><span style="color:#a7adba;">#SBATCH --exclusive
 </span><span> </span><span style="color:#a7adba;">#SBATCH --qos=preempt
 </span><span>
 </span><span> </span><span style="color:#bf616a;">./prog1
