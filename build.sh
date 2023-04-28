@@ -1,7 +1,7 @@
 
 git checkout gh-pages
 
-git submodule update
+git submodule update --init --recursive
 
 pip install -r requirements.txt
 
