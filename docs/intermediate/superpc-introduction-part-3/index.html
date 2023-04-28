@@ -24,23 +24,7 @@
 
                     <ul class="subtree">
                         <li >
-                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/rsync-tutorial/">rsync</a>
-                            </li>
-
-                            <li >
-                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/superpc-introduction-part-1/">Tutorial Introdução ao Supercomputador parte 1</a>
-                            </li>
-
-                            <li >
-                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/winscp-tutorial/">Copiando Arquivos através de uma Interface gráfica WinSCP (Windows)</a>
-                            </li>
-
-                            <li >
-                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/superpc-introduction-part-2/">Tutorial Introdução ao Supercomputador - Parte 2</a>
-                            </li>
-
-                            <li >
-                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/gnome-files/">Copiando Arquivos através de uma Interface gráfica Gnome Files (linux)</a>
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/mobaxterm-tutorial/">MobaXterm Tutoriais</a>
                             </li>
 
                             <li >
@@ -52,30 +36,27 @@
                             </li>
 
                             <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/winscp-tutorial/">Copiando Arquivos através de uma Interface gráfica WinSCP (Windows)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/superpc-introduction-part-1/">Tutorial Introdução ao Supercomputador parte 1</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/rsync-tutorial/">rsync</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/superpc-introduction-part-2/">Tutorial Introdução ao Supercomputador - Parte 2</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/gnome-files/">Copiando Arquivos através de uma Interface gráfica Gnome Files (linux)</a>
+                            </li>
+
+                            <li >
                                 <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/putty-tutorial/">PuTTy tutoriais</a>
-                            </li>
-
-                            <li >
-                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/mobaxterm-tutorial/">MobaXterm Tutoriais</a>
-                            </li>
-
-                            </ul>
-                <input class="tree-toggle" type="checkbox" id="avancado"
-                           />
-                    <label class="tree-toggle-label"
-                           for="avancado">avançado</label>
-
-                    <ul class="subtree">
-                        <li >
-                                <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/mpi-tutorial/">Tutorial MPI</a>
-                            </li>
-
-                            <li >
-                                <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/tch-rs-tutorial/">tch-rs-example NMIST</a>
-                            </li>
-
-                            <li >
-                                <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/openmp-tutorial/">Tutorial OpenMP</a>
                             </li>
 
                             </ul>
@@ -85,7 +66,15 @@
                            for="intermediario">intermediário</label>
 
                     <ul class="subtree">
-                        <li class="active">
+                        <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/intermediate/install-apps/">Tutorial de instalação de programas no supercomputador</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/intermediate/slurm-commands/">Tutorial de comandos do supercomputador</a>
+                            </li>
+
+                            <li class="active">
                                 <a href="https://samuel-cavalcanti.github.io/Tutorials/intermediate/superpc-introduction-part-3/">Tutorial Introdução ao Supercomputador - Parte 3</a>
                             </li>
 
@@ -132,12 +121,23 @@
                                                             </ul>
                                                     </li>
                                             </ul>
-                                    <li >
-                                <a href="https://samuel-cavalcanti.github.io/Tutorials/intermediate/install-apps/">Tutorial de instalação de programas no supercomputador</a>
+                                    </ul>
+                <input class="tree-toggle" type="checkbox" id="avancado"
+                           />
+                    <label class="tree-toggle-label"
+                           for="avancado">avançado</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/tch-rs-tutorial/">tch-rs-example NMIST</a>
                             </li>
 
                             <li >
-                                <a href="https://samuel-cavalcanti.github.io/Tutorials/intermediate/slurm-commands/">Tutorial de comandos do supercomputador</a>
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/openmp-tutorial/">Tutorial OpenMP</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/mpi-tutorial/">Tutorial MPI</a>
                             </li>
 
                             </ul>
@@ -250,16 +250,16 @@
 <h2 id="definir-a-quantidade-de-memoria-a-ser-utilizada">Definir a quantidade de memória a ser utilizada</h2>
 <p>O supercomputador está configurado para atribuir, no mínimo, 4GB de memória por núcleo. Caso queira modificar a quantidade de memória padrão, você pode utilizar a opção <code>#SBATCH --mem-per-cpu</code>, como demonstrado no exemplo a seguir:</p>
 <pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#a7adba;">#!/bin/bash
-</span><span style="color:#a7adba;">#SBATCH --mem-per-cpu=8000
-</span><span style="color:#a7adba;">#SBATCH --cpus-per-task=8
+</span><span style="color:#a7adba;">#SBATCH --mem-per-cpu=1000
+</span><span style="color:#a7adba;">#SBATCH --cpus-per-task=3
 </span><span>
 </span><span style="color:#bf616a;">./prog1
 </span></code></pre>
-<p>O script do exemplo utiliza oito cpus e para cada cpu é reservado aproximadamente 8GB de memória. Sendo que a multiplicação entre a quantidade de memória por cpu e o número de cpus usada não pode ultrapassar de 128GB, pois esse é o limite de cada nó.</p>
+<p>O script do exemplo utiliza 3 cpus e para cada cpu é reservado aproximadamente 1GB de memória. Sendo que a multiplicação entre a quantidade de memória por cpu e o número de cpus usada não pode ultrapassar de 4GB, pois esse é o limite de cada nó. O limite de cada nó varia de acordo com a sua partição. Um Nó pertencente a partição <strong>cluster</strong> ou <strong>service</strong>, só pode utilizar ao total 4GB. Um nó na partição <strong>intel-256</strong> e  <strong>gpu</strong>  pode usar até 8 GB e <strong>intel-512</strong> pode usar até 16GB. Lembrando que a partição <strong>test</strong> é <strong>cluster</strong> mais <strong>service</strong>.</p>
 <p>Também há a opção <code>#SBATCH --mem</code> que já especifica a quantidade de memória para o job por completo.</p>
 <pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#a7adba;">#!/bin/bash
-</span><span style="color:#a7adba;">#SBATCH --mem=64000
-</span><span style="color:#a7adba;">#SBATCH --cpus-per-task=8
+</span><span style="color:#a7adba;">#SBATCH --mem=3000
+</span><span style="color:#a7adba;">#SBATCH --cpus-per-task=3
 </span><span>
 </span><span style="color:#bf616a;">./prog1
 </span></code></pre>
@@ -286,7 +286,7 @@
 <h2 id="utilizando-a-sua-pasta-home">Utilizando a sua pasta home</h2>
 <p>Ao logar no supercomputador, você estará na pasta home. Essa pasta possui uma comunicação via rede com o supercomputador e já está configurada para, ao submeter os scripts para o supercomputador, ler os arquivos de entrada necessários para executar o job dessa pasta, assim como arquivo log de saída que será salvo nesse mesmo local.</p>
 <p>Ou seja, não é necessário utilizar comandos extras ao utilizar essa pasta. Apenas as configurações básicas do script, como o tempo estimado de execução do programa, quantidade de cpus, a fila em que deseja alocar o job e afins.</p>
-<p>Uma vez com o script pronto, é só enviar o script com o comando <strong>sbatch seuscript</strong>.</p>
+<p>Uma vez com o script pronto, é só enviar o script com o comando <code>sbatch</code>.</p>
 <pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">[usuario@service0 ~</span><span>]$ sbatch meu-script.sh
 </span></code></pre>
 <h2 id="utilizando-o-scratch-local">Utilizando o scratch local</h2>
