@@ -1,7 +1,7 @@
 
 git checkout gh-pages
 
-git git submodule update
+git submodule update
 
 pip install -r requirements.txt
 
@@ -16,6 +16,8 @@ rm -rf docs
 zola build -o docs
 
 git add docs
+
+echo "updating docs"
 
 git commit -m "updated docs"
 
