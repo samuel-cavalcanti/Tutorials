@@ -13,7 +13,7 @@ rm -rf Tutorials
 
 rm -rf docs
 
-zola build -o docs
+zola build
 
 git add docs
 
