@@ -28,15 +28,27 @@ def concatenate_list(list_a: list, list_b: list) -> list:
 def github_links_to_zola_links(markdown_content: str) -> str:
     links_to_markdown = re.findall(r"\[.*\](\(.*.md\))", markdown_content)
     all_anchors = re.findall(r"\[.*\](\(#.*\))", markdown_content)
-    for link in links_to_markdown:
+    all_pngs = re.findall(r"\[.*\](\(.*.png\))", markdown_content)
+    
+    def github_link_to_zola(link:str)->str:
         if link[0:2] == '(/':  # exemplo (/advanced/test.md)
-            new_link = f"(@/{link[2:]}"
+            return f"(@/{link[2:]}"
         else:  # exemplo (advanced/test.md)
-            new_link = f"(@/{link[1:]}"
+            return f"(@/{link[1:]}"
+    
+
+    for link in links_to_markdown:
+        new_link = github_link_to_zola(link)
         markdown_content = markdown_content.replace(link, new_link)
+
     for link in all_anchors:
         new_link = unidecode.unidecode(link).replace('---', '-')
         markdown_content = markdown_content.replace(link, new_link)
+    
+    for png_link in all_pngs:
+        new_link = github_link_to_zola(png_link)
+        markdown_content = markdown_content.replace(png_link, new_link)
+
 
     return markdown_content
 
