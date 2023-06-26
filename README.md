@@ -36,4 +36,3 @@
 
 Encontrou algum problemas nos tutoriais por favor crie uma issue em
 [github.com/NPAD-UFRN/Tutorials/issues](https://github.com/NPAD-UFRN/Tutorials/issues)
-
