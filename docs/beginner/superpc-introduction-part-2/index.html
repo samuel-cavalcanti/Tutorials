@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://samuel-cavalcanti.github.io/Tutorials/main.css">
+    <link rel="icon" href="https://samuel-cavalcanti.github.io/Tutorials/npad.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>  | Tutorial Introdução ao Supercomputador - Parte 2 </title>
+</head>
+<body>
+
+<main>
+    
+    <nav>
+            <a href="https:&#x2F;&#x2F;samuel-cavalcanti.github.io&#x2F;Tutorials&#x2F;">
+                        <img src="https://samuel-cavalcanti.github.io/Tutorials/npad_logo.png" alt="logo"/>
+                    </a>
+                <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="intermediario"
+                           />
+                    <label class="tree-toggle-label"
+                           for="intermediario">intermediário</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/intermediate/slurm-commands/">Tutorial de comandos do supercomputador</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/intermediate/install-apps/">Tutorial de instalação de programas no supercomputador</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/intermediate/superpc-introduction-part-3/">Tutorial Introdução ao Supercomputador - Parte 3</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="iniciante"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="iniciante">iniciante</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/superpc-introduction-part-1/">Tutorial Introdução ao Supercomputador parte 1</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/superpc-introduction-part-2/">Tutorial Introdução ao Supercomputador - Parte 2</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        https://samuel-cavalcanti.github.io/Tutorials/beginner/superpc-introduction-part-2/#tutorial-introducao-ao-supercomputador-parte-2">Tutorial Introdução ao Supercomputador - Parte 2</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/superpc-introduction-part-2/#topicos">Tópicos</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/superpc-introduction-part-2/#criando-um-script-para-um-programa-ja-existente-no-supercomputador">Criando um script para um programa já existente no supercomputador</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/superpc-introduction-part-2/#executando-um-programa-ja-existente-no-supercomputador">Executando um programa já existente no supercomputador</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/superpc-introduction-part-2/#criando-um-script-para-executar-um-programa-criado-a-partir-do-codigo-fonte">Criando um script para executar um programa criado a partir do código-fonte</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/superpc-introduction-part-2/#executando-um-programa-criado-a-partir-do-codigo-fonte">Executando um programa criado a partir do código-fonte</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            </ul>
+                                    <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/scp-tutorial/">scp</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/gnome-files/">Copiando Arquivos através de uma Interface gráfica Gnome Files (linux)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/mobaxterm-tutorial/">MobaXterm Tutoriais</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/rsync-tutorial/">rsync</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/winscp-tutorial/">Copiando Arquivos através de uma Interface gráfica WinSCP (Windows)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/putty-tutorial/">PuTTy tutoriais</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="avancado"
+                           />
+                    <label class="tree-toggle-label"
+                           for="avancado">avançado</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/tch-rs-tutorial/">tch-rs-example NMIST</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/mpi-tutorial/">Tutorial MPI</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/openmp-tutorial/">Tutorial OpenMP</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <!--
+title: "Núcleo de Processamento de Alto Desempenho - UFRN"
+description: "Source code generated using layoutit.com"
+author: "Samuel Xavier de Souza"
+-->
+<h1 id="tutorial-introducao-ao-supercomputador-parte-2">Tutorial Introdução ao Supercomputador - Parte 2</h1>
+<p>Nesse tutorial iremos aprender a criar um script e executar um programa utilizando o supercomputador. Caso surja alguma dúvida durante o tutorial, sinta-se à vontade para entrar em contato conosco através do e-mail <strong>atendimento&lt;at&gt;npad.ufrn.br</strong> (substituindo &lt;at&gt; por <strong>@</strong>).</p>
+<h2 id="topicos">Tópicos</h2>
+<ul>
+<li><a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/superpc-introduction-part-2/#tutorial-introducao-ao-supercomputador-parte-2">Tutorial Introdução ao Supercomputador - Parte 2</a>
+<ul>
+<li><a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/superpc-introduction-part-2/#topicos">Tópicos</a></li>
+<li><a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/superpc-introduction-part-2/#criando-um-script-para-um-programa-ja-existente-no-supercomputador">Criando um script para um programa já existente no supercomputador</a></li>
+<li><a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/superpc-introduction-part-2/#executando-um-programa-ja-existente-no-supercomputador">Executando um programa já existente no supercomputador</a>
+<ul>
+<li><a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/superpc-introduction-part-2/#execucao-de-programas-no-no-de-login">Execução de programas no nó de login</a></li>
+<li><a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/superpc-introduction-part-2/#execucao-de-programas-no-no-de-computacao">Execução de programas no nó de computação</a></li>
+<li><a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/superpc-introduction-part-2/#verificacao-da-execucao">Verificação da execução</a></li>
+</ul>
+</li>
+<li><a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/superpc-introduction-part-2/#criando-um-script-para-executar-um-programa-criado-a-partir-do-codigo-fonte">Criando um script para executar um programa criado a partir do código-fonte</a></li>
+<li><a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/superpc-introduction-part-2/#executando-um-programa-criado-a-partir-do-codigo-fonte">Executando um programa criado a partir do código-fonte</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="criando-um-script-para-um-programa-ja-existente-no-supercomputador">Criando um script para um programa já existente no supercomputador</h2>
+<p>Para criar um <strong>script</strong> para executar programas no supercomputador é necessário informar o nome do programa que irá ser executado e o tempo máximo de sua execução (saiba como escolher o tempo de execução <a href="http://npad.ufrn.br/tutoriais/introducao-parte3.php#backfill">aqui</a>). <strong>O tempo máximo depende do tipo de nó escolhido.</strong> Acesse o supercomputador e siga as orientações a seguir.</p>
+<p><strong>Exemplo: criação de um script para executar o programa factor.</strong></p>
+<p>No terminal, entre com o comando abaixo no terminal do Linux, seguido de enter.</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">nano</span><span> nomeScript    </span><span style="color:#a7adba;"># Substitua nomeScript pelo nome que você deseja dar ao seu script
+</span></code></pre>
+<p>Após abrir o programa <strong>nano</strong>, execute os comandos abaixo no terminal do Linux:</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#a7adba;">#!/bin/bash
+</span><span style="color:#a7adba;">#SBATCH --time=0-0:5    # Especifica o tempo máximo de execução do job, dado no padrão dias-horas:minutos
+</span><span style="color:#bf616a;">factor</span><span> 120     </span><span style="color:#a7adba;"># Especifica o programa a ser executado (no caso, factor) e o parâmetro de entrada (120)
+</span></code></pre>
+<p>Em sequência aperte ctrl+o, depois enter e, então, aperte ctrl+x para sair do <strong>nano</strong>. Vale ressaltar que também é possível abrir o arquivo correspondente ao script e fazer alterações diretamente nele, via <a href="/beginner/superpc_introduction_part_1.md#atrav%C3%A9s-de-uma-interface-gr%C3%A1fica">interface gráfica</a>.</p>
+<h2 id="executando-um-programa-ja-existente-no-supercomputador">Executando um programa já existente no supercomputador</h2>
+<p>Para executar um programa no supercomputador, você precisará criar um script, conforme descrito anteriormente, e escolher em qual tipo de nó o programa vai ser executado:</p>
+<h3 id="execucao-de-programas-no-no-de-login">Execução de programas no nó de login</h3>
+<p>O nó de login é mais indicado para execução de softwares de teste, ou seja, que requerem um tempo de execução menor. O tempo limite para execução neste nó é de 30 minutos, considerando que o usuário está utilizando apenas um núcleo e 100% de sua capacidade. Um usuário que decide utilizar esse nó para execução de um processo que ocupa 100% de 10 CPUs, por exemplo, será terminado automaticamente após 3 minutos de uso, como pode ser visto na tabela abaixo (<strong>Figura 1</strong>), junto com demais exemplos. Isso ocorre mesmo que o script tenha tempo maior configurado. Desse modo, recomenda-se utilizar o nó de login apenas para fins de teste.</p>
+<p><img src="/assets/superpc_introduction_part_2/Tabela_Uso_Noh_Login.bmp" alt="Figura 1" />
+<strong>Figura 1 - Tabela com exemplos de tempo de execução de programas no nó de login, para várias configurações</strong></p>
+<p>Para executar um programa no supercomputador no nó de login, use o comando a seguir no terminal do Linux:</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">./meuPrimeiroScript
+</span></code></pre>
+<p>Onde <strong>meuPrimeiroScript</strong> é o script com os dados de execução.</p>
+<h3 id="execucao-de-programas-no-no-de-computacao">Execução de programas no nó de computação</h3>
+<p>O Nó de Computação, por sua vez, é o mais indicado para uso de softwares gerais, que necessitem de um tempo de execução elevado. É nele que você irá utilizar a maioria dos programas disponíveis no supercomputador, podendo deixá-los em execução por longos períodos. A seguir, você irá aprender como criar scripts e executar programas no nó de computação.</p>
+<p>Para executar um programa no supercomputador no nó de computação, use o comando a seguir no terminal do Linux:</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sbatch</span><span> meuPrimeiroScript
+</span></code></pre>
+<p>Onde <strong>meuPrimeiroScript</strong> é o script com os dados de execução.</p>
+<h3 id="verificacao-da-execucao">Verificação da execução</h3>
+<p>Caso o job tenha sido submetido corretamente, aparecerá a mensagem:</p>
+<p><code>Submitted batch job JobID</code></p>
+<p>Onde JobID será substituído pelo número que identificará o job. A saída do programa não aparecerá na tela. Ela será escrita em um arquivo de nome <strong>slurm-JobID.out</strong>, onde JobID será o mesmo valor do id do job submetido.</p>
+<p>Para ver a saída do programa, use o comando:</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">cat</span><span> slurm-JobID.out
+</span></code></pre>
+<p>Substituindo JobID pelo id do job que você deseja ver a saída.</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">[nomeDoUsuario@service0 ~</span><span>]$ sbatch meuPrimeiroScript
+</span><span style="color:#bf616a;">Submitted</span><span> batch job 14518
+</span><span style="color:#bf616a;">[nomeDoUsuario@service0 ~</span><span>]$ cat slurm-14518.out
+</span><span style="color:#bf616a;">120:</span><span> 2 2 2 3 5
+</span></code></pre>
+<p>A execução de um programa no supercomputador está sujeita à disponibilidade de nós, desse modo, o resultado pode demorar. Para acompanhar o andamento da fila, bem como a prioridade do job submetido por você na mesma, a seção de <a href="https://samuel-cavalcanti.github.io/Tutorials/intermediate/slurm-commands/">Comandos</a> pode ser bastante útil.</p>
+<h2 id="criando-um-script-para-executar-um-programa-criado-a-partir-do-codigo-fonte">Criando um script para executar um programa criado a partir do código-fonte</h2>
+<p><strong>Caso o programa tenha sido criado a partir do códido-fonte deve-se acrescentar ao nome do programa a pasta onde este se encontra.</strong></p>
+<p><strong>Exemplo:</strong></p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#a7adba;">#!/bin/bash
+</span><span>
+</span><span style="color:#a7adba;">#SBATCH --time=0-0:5 #especifica o tempo máximo de execução do job, dado no padrão dias-horas:minutos
+</span><span>
+</span><span style="color:#bf616a;">./helloWorld </span><span style="color:#a7adba;">#o ponto e a barra indicam o caminho até a pasta atual.
+</span></code></pre>
+<p>Saiba como escolher o tempo de execução <a href="/intermediate/superpc_introduction_part_3.md#backfill-e-escolha-do-tempo-de-execu%C3%A7%C3%A3o">aqui</a>.</p>
+<h2 id="executando-um-programa-criado-a-partir-do-codigo-fonte">Executando um programa criado a partir do código-fonte</h2>
+<p>Para executar um programa a partir do código-fonte o usuário deverá, em sua pasta no supercomputador, gerar o programa executável.</p>
+<p>Para criar o executável do programa digite:</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">gcc</span><span> helloWorld.c</span><span style="color:#bf616a;"> -o</span><span> helloWorld
+</span></code></pre>
+<p>Onde <strong>helloWorld.c</strong> é o código-fonte e <strong>helloWorld</strong> é o código executável.</p>
+<p>Para executar o programa gerado, você deverá executar o script gerado anteriormente utilizando o comando <code>sbatch jobHelloWorld</code> ou <code>sbatch -p test jobHelloWorld</code> de acordo com o tipo de nó desejado.</p>
+<p>Caso o job tenha sido submetido corretamente, aparecerá a mensagem:</p>
+<p><code>Submitted batch job JobID</code></p>
+<p>Onde JobID será substituído pelo número que identificará o job. A saída do programa não aparecerá na tela. Ela será escrita em um arquivo de nome <strong>slurm-JobID.out</strong>, onde JobID será o mesmo valor do id do job submetido.</p>
+<p>Para ver a saída do programa, use o comando:</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">cat</span><span> slurm-JobID.out
+</span></code></pre>
+<p>Substituindo JobID pelo id do job que você deseja ver a saída.</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">[nomeDoUsuario@service0 ~</span><span>]$ gcc helloWorld.c</span><span style="color:#bf616a;"> -o</span><span> helloWorld
+</span><span style="color:#bf616a;">[nomeDoUsuario@service0 ~</span><span>]$ sbatch jobHelloWorld
+</span><span style="color:#bf616a;">Submitted</span><span> batch job 14520
+</span><span style="color:#bf616a;">[nomeDoUsuario@service0 ~</span><span>]$ cat slurm-14520.out
+</span><span style="color:#bf616a;">Hello</span><span> World!
+</span></code></pre>
+<p>Para executar programas em paralelo no supercomputador, leia os tutorias de <a href="/advanced/openmp_tutorial.md">OpenMP</a> e <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/mpi-tutorial/">MPI</a>.</p>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="https://samuel-cavalcanti.github.io/Tutorials/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="https://samuel-cavalcanti.github.io/Tutorials/search_index.en.js" defer></script>
+<script type="text/javascript" src="https://samuel-cavalcanti.github.io/Tutorials/js.js" defer></script>
+
+</body>
+</html>

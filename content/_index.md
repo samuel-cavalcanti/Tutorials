@@ -40,4 +40,3 @@ insert_anchor_links = "right"
 
 Encontrou algum problemas nos tutoriais por favor crie uma issue em
 [github.com/NPAD-UFRN/Tutorials/issues](https://github.com/NPAD-UFRN/Tutorials/issues)
-

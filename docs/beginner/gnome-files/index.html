@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://samuel-cavalcanti.github.io/Tutorials/main.css">
+    <link rel="icon" href="https://samuel-cavalcanti.github.io/Tutorials/npad.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>  | Copiando Arquivos através de uma Interface gráfica Gnome Files (linux) </title>
+</head>
+<body>
+
+<main>
+    
+    <nav>
+            <a href="https:&#x2F;&#x2F;samuel-cavalcanti.github.io&#x2F;Tutorials&#x2F;">
+                        <img src="https://samuel-cavalcanti.github.io/Tutorials/npad_logo.png" alt="logo"/>
+                    </a>
+                <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="intermediario"
+                           />
+                    <label class="tree-toggle-label"
+                           for="intermediario">intermediário</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/intermediate/slurm-commands/">Tutorial de comandos do supercomputador</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/intermediate/install-apps/">Tutorial de instalação de programas no supercomputador</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/intermediate/superpc-introduction-part-3/">Tutorial Introdução ao Supercomputador - Parte 3</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="iniciante"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="iniciante">iniciante</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/superpc-introduction-part-1/">Tutorial Introdução ao Supercomputador parte 1</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/superpc-introduction-part-2/">Tutorial Introdução ao Supercomputador - Parte 2</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/scp-tutorial/">scp</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/gnome-files/">Copiando Arquivos através de uma Interface gráfica Gnome Files (linux)</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/mobaxterm-tutorial/">MobaXterm Tutoriais</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/rsync-tutorial/">rsync</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/winscp-tutorial/">Copiando Arquivos através de uma Interface gráfica WinSCP (Windows)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/putty-tutorial/">PuTTy tutoriais</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="avancado"
+                           />
+                    <label class="tree-toggle-label"
+                           for="avancado">avançado</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/tch-rs-tutorial/">tch-rs-example NMIST</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/mpi-tutorial/">Tutorial MPI</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/openmp-tutorial/">Tutorial OpenMP</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <h1 id="copiando-arquivos-atraves-de-uma-interface-grafica-gnome-files-linux">Copiando Arquivos através de uma Interface gráfica Gnome Files (linux)</h1>
+<p><strong>Gnome</strong> é a interface padrão do <strong>Ubuntu</strong>. Que é distribuição padrão
+para desenvolvimento do Instituto Metrópole Digital (IMD). Portanto iremos mostrar como conectar o navegador de arquivos padrão do Gnome, chamado <strong>Gnome files</strong> com os seus arquivos no supercomputador. A versão do Gnome files utilizada é a <strong>43.3</strong></p>
+<p><img src="/Tutorials/assets/gnome_files/files.png" alt="Imagem do Gnome files" /></p>
+<h2 id="clique-em-other-locations">Clique em Other Locations</h2>
+<p>Abra o gestor de arquivos Gnome files e clique em <strong>Other Locations</strong> como
+apontado na imagem</p>
+<p><img src="/Tutorials/assets/gnome_files/files_click_on_other_locations.png" alt="Clique em other Locations" /></p>
+<h2 id="digite-o-endereco-do-super-pc">Digite o endereço do super pc</h2>
+<p>No canto inferior direito, digite o endereço do supercomputador. No caso o endereço varia de acordo com o seu nome de usuário:</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">ssh://nomeDoUsuario@sc2.npad.ufrn.br:4422
+</span></code></pre>
+<p>No entanto caso você tenha configurado o arquivo <strong>~/.ssh/config</strong>
+o endereço pode ser escrito da seguinte forma:</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">ssh://super-pc
+</span></code></pre>
+<p><img src="/Tutorials/assets/gnome_files/enter_server_addresss.png" alt="Clique em other Locations" /></p>
+<h3 id="dica-adicione-nos-favoritos">Dica: Adicione nos favoritos</h3>
+<p>Para não precisar ficar refazendo este tutorial, você pode salvar o
+o endereço do supercomputador nos favoritos, clicando com botão direito do mouse e depois em <strong>add to Bookmarks</strong></p>
+<p><img src="/Tutorials/assets/gnome_files/add_bookmarks.png" alt="adicione nos favoritos" /></p>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="https://samuel-cavalcanti.github.io/Tutorials/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="https://samuel-cavalcanti.github.io/Tutorials/search_index.en.js" defer></script>
+<script type="text/javascript" src="https://samuel-cavalcanti.github.io/Tutorials/js.js" defer></script>
+
+</body>
+</html>
