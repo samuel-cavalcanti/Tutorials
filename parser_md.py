@@ -107,7 +107,7 @@ def create_indexs(content: Path):
         sub_dir = content / dir_name
         index_file = sub_dir / '_index.md'
 
-        index_content = f"+++\ntitle:{title}\n+++\n"
+        index_content = f'+++\ntitle = "{title}"\n+++\n'
         index_file.write_text(index_content)
 
 
