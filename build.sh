@@ -15,7 +15,7 @@ rm -rf docs
 
 zola build
 
-git add docs
+git add docs content
 
 echo "updating docs"
 
