@@ -29,15 +29,15 @@ def github_links_to_zola_links(markdown_content: str) -> str:
     links_to_markdown = re.findall(r"\[.*\](\(.*.md\))", markdown_content)
     all_anchors = re.findall(r"\[.*\](\(#.*\))", markdown_content)
     all_pngs = re.findall(r"\[.*\](\(.*.png\))", markdown_content)
-    
-    def github_link_to_zola(link:str)->str:
+
+    def github_link_to_zola(link: str) -> str:
         if link[0:2] == '(/':  # exemplo (/advanced/test.md)
             return f"(@/{link[2:]}"
         else:  # exemplo (advanced/test.md)
             return f"(@/{link[1:]}"
-    
-    def img_link_to_zola(link:str)->str:
-        repo_name= '/Tutorials'
+
+    def img_link_to_zola(link: str) -> str:
+        repo_name = '/Tutorials'
         if link[0:2] == '(/':  # exemplo (/advanced/test.md)
             return f"({repo_name}/{link[2:]}"
         else:  # exemplo (advanced/test.md)
@@ -51,12 +51,11 @@ def github_links_to_zola_links(markdown_content: str) -> str:
     for link in all_anchors:
         new_link = unidecode.unidecode(link).replace('---', '-')
         markdown_content = markdown_content.replace(link, new_link)
-    
+
     for png_link in all_pngs:
         new_link = img_link_to_zola(png_link)
         print(f'current link:{png_link}\tnew_link:{new_link}')
         markdown_content = markdown_content.replace(png_link, new_link)
-
 
     return markdown_content
 
@@ -97,6 +96,21 @@ def move_assets_to_static_dir(tutorials: Path) -> None:
     assets.rename(static_path)
 
 
+def create_indexs(content: Path):
+    titles = {
+        'beginner': 'iniciante',
+        'intermediate': 'intermediário',
+        'advanced': 'avançado'
+    }
+    
+    for dir_name, title in titles.items():
+        sub_dir = content / dir_name
+        index_file = sub_dir / '_index.md'
+
+        index_content = f"+++\ntitle:{title}\n+++\n"
+        index_file.write_text(index_content)
+
+
 def main() -> None:
 
     content_dir = Path('content')
@@ -112,6 +126,7 @@ def main() -> None:
         move_markdown_to_content_dir(markdown, content_dir)
 
     move_assets_to_static_dir(tutorials_path)
+    create_indexs(content_dir)
 
 
 if __name__ == "__main__":
