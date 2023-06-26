@@ -37,7 +37,7 @@ def github_links_to_zola_links(markdown_content: str) -> str:
             return f"(@/{link[1:]}"
     
     def img_link_to_zola(link:str)->str:
-        repo_name= 'Tutorials'
+        repo_name= '/Tutorials'
         if link[0:2] == '(/':  # exemplo (/advanced/test.md)
             return f"({repo_name}/{link[2:]}"
         else:  # exemplo (advanced/test.md)
@@ -45,6 +45,7 @@ def github_links_to_zola_links(markdown_content: str) -> str:
 
     for link in links_to_markdown:
         new_link = github_link_to_zola(link)
+        print(f'current link:{link}\tnew_link:{new_link}')
         markdown_content = markdown_content.replace(link, new_link)
 
     for link in all_anchors:
@@ -53,6 +54,7 @@ def github_links_to_zola_links(markdown_content: str) -> str:
     
     for png_link in all_pngs:
         new_link = img_link_to_zola(png_link)
+        print(f'current link:{png_link}\tnew_link:{new_link}')
         markdown_content = markdown_content.replace(png_link, new_link)
 
 
