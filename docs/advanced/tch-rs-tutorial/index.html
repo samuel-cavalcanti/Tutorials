@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://samuel-cavalcanti.github.io/Tutorials/main.css">
+    <link rel="icon" href="https://samuel-cavalcanti.github.io/Tutorials/npad.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>  | tch-rs-example NMIST </title>
+</head>
+<body>
+
+<main>
+    
+    <nav>
+            <a href="https:&#x2F;&#x2F;samuel-cavalcanti.github.io&#x2F;Tutorials&#x2F;">
+                        <img src="https://samuel-cavalcanti.github.io/Tutorials/npad_logo.png" alt="logo"/>
+                    </a>
+                <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="avancado"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="avancado">avançado</label>
+
+                    <ul class="subtree">
+                        <li class="active">
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/tch-rs-tutorial/">tch-rs-example NMIST</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        https://samuel-cavalcanti.github.io/Tutorials/advanced/tch-rs-tutorial/#tch-rs-example-nmist">tch-rs-example NMIST</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/tch-rs-tutorial/#topicos">Tópicos</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/tch-rs-tutorial/#instalando-dependencias">Instalando dependências</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/tch-rs-tutorial/#criando-um-aplicacao-em-rust-para-treinar-uma-rede-neural">Criando um aplicação em rust para treinar uma rede neural</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/tch-rs-tutorial/#carregamento-do-conjunto-de-dados-nmist">carregamento do conjunto de dados NMIST</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/tch-rs-tutorial/#executando-a-aplicacao-com-cuda-no-supercomputador">Executando a aplicação com cuda no supercomputador</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            </ul>
+                                    <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/openmp-tutorial/">Tutorial OpenMP</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/mpi-tutorial/">Tutorial MPI</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="intermediario"
+                           />
+                    <label class="tree-toggle-label"
+                           for="intermediario">intermediário</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/intermediate/install-apps/">Tutorial de instalação de programas no supercomputador</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/intermediate/superpc-introduction-part-3/">Tutorial Introdução ao Supercomputador - Parte 3</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/intermediate/slurm-commands/">Tutorial de comandos do supercomputador</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="iniciante"
+                           />
+                    <label class="tree-toggle-label"
+                           for="iniciante">iniciante</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/ssh-tutorial/">Geração de chave SSH pública</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/superpc-introduction-part-2/">Tutorial Introdução ao Supercomputador - Parte 2</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/winscp-tutorial/">Copiando Arquivos através de uma Interface gráfica WinSCP (Windows)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/mobaxterm-tutorial/">MobaXterm Tutoriais</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/superpc-introduction-part-1/">Tutorial Introdução ao Supercomputador parte 1</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/putty-tutorial/">PuTTy tutoriais</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/gnome-files/">Copiando Arquivos através de uma Interface gráfica Gnome Files (linux)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/scp-tutorial/">scp</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/rsync-tutorial/">rsync</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <h1 id="tch-rs-example-nmist">tch-rs-example NMIST</h1>
+<p>Nesse tutorial você irá aprender a usar a partição <strong>gpu</strong> e rust  para treinar um modelo de deep learning  para resolver o <a href="http://yann.lecun.com/exdb/mnist/">MNIST</a>.</p>
+<h2 id="topicos">Tópicos</h2>
+<ul>
+<li><a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/tch-rs-tutorial/#tch-rs-example-nmist">tch-rs-example NMIST</a>
+<ul>
+<li><a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/tch-rs-tutorial/#topicos">Tópicos</a></li>
+<li><a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/tch-rs-tutorial/#instalando-dependencias">Instalando dependências</a></li>
+<li><a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/tch-rs-tutorial/#criando-um-aplicacao-em-rust-para-treinar-uma-rede-neural">Criando um aplicação em rust para treinar uma rede neural</a></li>
+<li><a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/tch-rs-tutorial/#carregamento-do-conjunto-de-dados-nmist">carregamento do conjunto de dados NMIST</a>
+<ul>
+<li><a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/tch-rs-tutorial/#configuracao-do-dispositivo-de-processamento">configuração do dispositivo de processamento</a></li>
+<li><a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/tch-rs-tutorial/#criando-um-modelo-deep-learning">criando um modelo deep learning</a></li>
+<li><a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/tch-rs-tutorial/#treinamento">treinamento</a></li>
+</ul>
+</li>
+<li><a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/tch-rs-tutorial/#executando-a-aplicacao-com-cuda-no-supercomputador">Executando a aplicação com cuda no supercomputador</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="instalando-dependencias">Instalando dependências</h2>
+<p>Primeiro instale o rust toolchain na sua pasta HOME, no nó de login.</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">curl --proto </span><span>&#39;</span><span style="color:#a3be8c;">=https</span><span>&#39;</span><span style="color:#bf616a;"> --tlsv1</span><span>.2</span><span style="color:#bf616a;"> -sSf</span><span> https://sh.rustup.rs | </span><span style="color:#bf616a;">sh
+</span></code></pre>
+<p>segundo crie um novo projeto rust com cargo chamado pytorch-example. Para esse projeto Adicione as dependências:</p>
+<ul>
+<li><strong>anyhow</strong>, uma biblioteca para facilita o tratamento de erro em rust</li>
+<li><strong>tch</strong> O framework Pytorch para criação de modelos deep learning escrito em C++, mas com bindings para rust</li>
+</ul>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">cargo</span><span> new pytorch-example
+</span><span style="color:#96b5b4;">cd</span><span> pytorch-example
+</span><span style="color:#bf616a;">cargo</span><span> add anyhow
+</span><span style="color:#bf616a;">cargo</span><span> add tch
+</span></code></pre>
+<h2 id="criando-um-aplicacao-em-rust-para-treinar-uma-rede-neural">Criando um aplicação em rust para treinar uma rede neural</h2>
+<p>A aplicação escrita  em rust, deverá selecionar qual dispositivo de processamento, CPU ou GPU, deverá ser usado para a execução dos cálculos numéricos.
+Carregar o conjunto de dados NMIST para ser computado em tal dispositivo. Criar um modelo deep learning e treinar o modelo. Portanto podemos entender
+a aplicação em  4 partes importantes:  carregamento do conjunto de dados NMIST, configuração do dispositivo, criando um modelo deep learning, treinamento.</p>
+<h2 id="carregamento-do-conjunto-de-dados-nmist">carregamento do conjunto de dados NMIST</h2>
+<p>Como o NMIST é um conjunto de dados muito famoso, o próprio pytorch possui mecanismos de carregá-lo, desde que você tenha ele baixado e descompactado.
+Para baixar o dataset, você pode criar um script similar ao <a href="https://github.com/samuel-cavalcanti/tch-rs-example/blob/main/get_inputs.sh">get_inputs.sh</a>. Onde basicamente ele cria o diretório chamado <strong>data</strong>
+e baixa os arquivos do dataset e os extrai com <strong>gunzip</strong></p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#a7adba;">#!/bin/bash 
+</span><span style="color:#a7adba;"># get_inputs.sh
+</span><span style="color:#bf616a;">mkdir</span><span> data</span><span style="color:#bf616a;"> -p
+</span><span style="color:#96b5b4;">cd</span><span> data
+</span><span style="color:#bf616a;">wget</span><span> http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz; </span><span style="color:#bf616a;">gunzip</span><span> train-images-idx3-ubyte.gz
+</span><span style="color:#bf616a;">wget</span><span> http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz; </span><span style="color:#bf616a;">gunzip</span><span> train-labels-idx1-ubyte.gz
+</span><span style="color:#bf616a;">wget</span><span> http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz; </span><span style="color:#bf616a;">gunzip</span><span> t10k-images-idx3-ubyte.gz
+</span><span style="color:#bf616a;">wget</span><span> http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz; </span><span style="color:#bf616a;">gunzip</span><span> t10k-labels-idx1-ubyte.gz
+</span></code></pre>
+<p>Para carregar o dataset basta usar o a função <strong>tch::vision::mnist::load_dir</strong></p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let</span><span> dataset = </span><span style="color:#b48ead;">match </span><span>tch::vision::mnist::load_dir(&quot;</span><span style="color:#a3be8c;">data</span><span>&quot;) { Dataset
+</span><span>          Ok(d) =&gt; d, 
+</span><span>          Err(_) =&gt; panic!(&quot;</span><span style="color:#a3be8c;">Dataset Not found, run the get_inputs.sh !!</span><span>&quot;),
+</span><span>};
+</span></code></pre>
+<h3 id="configuracao-do-dispositivo-de-processamento">configuração do dispositivo de processamento</h3>
+<p>Utilizando um framework pytorch podemos selecionar o dispositivo da seguinte forma, se uma <strong>GPU</strong> estiver disponível, então utilize GPU. Caso o contrário utilize
+<strong>CPU</strong>. Com o dispositivo podemos criar um conjunto de tensores cujo seus valores <strong>variam</strong> e que esses valores deverão ser capazes de serem armazenados, ou seja
+criamos uma <strong>VarStore</strong>.</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span> </span><span style="color:#b48ead;">let</span><span> device = tch::Device::cuda_if_available();
+</span><span> </span><span style="color:#b48ead;">let</span><span> vs = tch::nn::VarStore::new(device.</span><span style="color:#96b5b4;">clone</span><span>());
+</span></code></pre>
+<p>Também precisamos transformar ou mover os dados do conjunto de dados para o dispositivo de processamento</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">dataset_to_device</span><span>(</span><span style="color:#bf616a;">dataset</span><span>: Dataset, </span><span style="color:#bf616a;">device</span><span>: &amp;Device) -&gt; Dataset {
+</span><span>    </span><span style="color:#b48ead;">let</span><span> train_labels = dataset.train_labels.</span><span style="color:#96b5b4;">to_device</span><span>(device.</span><span style="color:#96b5b4;">clone</span><span>());
+</span><span>    </span><span style="color:#b48ead;">let</span><span> train_images = dataset.train_images.</span><span style="color:#96b5b4;">to_device</span><span>(device.</span><span style="color:#96b5b4;">clone</span><span>());
+</span><span>    </span><span style="color:#b48ead;">let</span><span> test_labels = dataset.test_labels.</span><span style="color:#96b5b4;">to_device</span><span>(device.</span><span style="color:#96b5b4;">clone</span><span>());
+</span><span>    </span><span style="color:#b48ead;">let</span><span> test_images = dataset.test_images.</span><span style="color:#96b5b4;">to_device</span><span>(device.</span><span style="color:#96b5b4;">clone</span><span>());
+</span><span>
+</span><span>    Dataset {
+</span><span>        test_images,
+</span><span>        test_labels,
+</span><span>        train_images,
+</span><span>        train_labels,
+</span><span>        labels: dataset.labels,
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">let</span><span> dataset = </span><span style="color:#96b5b4;">dataset_to_device</span><span>(dataset, &amp;device);
+</span></code></pre>
+<h3 id="criando-um-modelo-deep-learning">criando um modelo deep learning</h3>
+<p>O modelo deep learning utilizado nesse exemplo será um modelo sequencial simples e com poucas camadas. Em rust o modelo
+ficou assim:</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>tch::{nn, nn::Module};
+</span><span style="color:#b48ead;">const </span><span style="color:#d08770;">IMAGE_DIM</span><span>: </span><span style="color:#b48ead;">i64 </span><span>= </span><span style="color:#d08770;">784</span><span>;
+</span><span style="color:#b48ead;">const </span><span style="color:#d08770;">HIDDEN_NODES</span><span>: </span><span style="color:#b48ead;">i64 </span><span>= </span><span style="color:#d08770;">128</span><span>;
+</span><span style="color:#b48ead;">const </span><span style="color:#d08770;">LABELS</span><span>: </span><span style="color:#b48ead;">i64 </span><span>= </span><span style="color:#d08770;">10</span><span>;
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">net</span><span>(</span><span style="color:#bf616a;">vs</span><span>: &amp;nn::Path) -&gt; impl Module {
+</span><span>    nn::seq()
+</span><span>        .</span><span style="color:#96b5b4;">add</span><span>(nn::linear(
+</span><span>            vs / &quot;</span><span style="color:#a3be8c;">layer1</span><span>&quot;,
+</span><span>            </span><span style="color:#d08770;">IMAGE_DIM</span><span>,
+</span><span>            </span><span style="color:#d08770;">HIDDEN_NODES</span><span>,
+</span><span>            Default::default(),
+</span><span>        ))
+</span><span>        .</span><span style="color:#96b5b4;">add_fn</span><span>(|</span><span style="color:#bf616a;">xs</span><span>| xs.</span><span style="color:#96b5b4;">relu</span><span>())
+</span><span>        .</span><span style="color:#96b5b4;">add</span><span>(nn::linear(vs, </span><span style="color:#d08770;">HIDDEN_NODES</span><span>, </span><span style="color:#d08770;">LABELS</span><span>, Default::default()))
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">let</span><span> net = </span><span style="color:#96b5b4;">net</span><span>(&amp;vs.</span><span style="color:#96b5b4;">root</span><span>());
+</span></code></pre>
+<p>Observe que vs (VarStore) é passada na função <strong>net</strong>, de modo que criar uma camada, ou módulo (layer) é alocar novos de tensores, para a variável.</p>
+<h3 id="treinamento">treinamento</h3>
+<p>Para treinar uma rede neural, pode-se utilizar vários algoritmos de otimização, porém nesse exemplo foi utilizado o <a href="https://pytorch.org/docs/stable/generated/torch.optim.Adam.html">Adam</a>,
+com uma taxa de aprendizado de <strong>0.001</strong>. O modelo será treinado durante 200 interações. Em rust a implementação do treinamento fica da seguinte forma</p>
+<pre data-lang="rust" style="background-color:#eff1f5;color:#4f5b66;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let mut</span><span> opt = nn::Adam::default().</span><span style="color:#96b5b4;">build</span><span>(&amp;vs, 1e-</span><span style="color:#d08770;">3</span><span>)?;
+</span><span>   
+</span><span style="color:#b48ead;">for</span><span> epoch in </span><span style="color:#d08770;">1</span><span>..</span><span style="color:#d08770;">200 </span><span>{
+</span><span>    </span><span style="color:#b48ead;">let</span><span> loss = net
+</span><span>            .</span><span style="color:#96b5b4;">forward</span><span>(&amp;dataset.train_images)
+</span><span>            .</span><span style="color:#96b5b4;">cross_entropy_for_logits</span><span>(&amp;dataset.train_labels);
+</span><span>        opt.</span><span style="color:#96b5b4;">backward_step</span><span>(&amp;loss);
+</span><span>        </span><span style="color:#b48ead;">let</span><span> test_accuracy = net
+</span><span>            .</span><span style="color:#96b5b4;">forward</span><span>(&amp;dataset.test_images)
+</span><span>            .</span><span style="color:#96b5b4;">accuracy_for_logits</span><span>(&amp;dataset.test_labels);
+</span><span>        println!(
+</span><span>            &quot;</span><span style="color:#a3be8c;">epoch: </span><span style="color:#d08770;">{:4}</span><span style="color:#a3be8c;"> train loss: </span><span style="color:#d08770;">{:8.5}</span><span style="color:#a3be8c;"> test acc: </span><span style="color:#d08770;">{:5.2}</span><span style="color:#a3be8c;">% is cuda: </span><span style="color:#d08770;">{}</span><span>&quot;,
+</span><span>            epoch,
+</span><span>            </span><span style="color:#b48ead;">f64</span><span>::try_from(&amp;loss)?,
+</span><span>            </span><span style="color:#d08770;">100. </span><span>* </span><span style="color:#b48ead;">f64</span><span>::try_from(&amp;test_accuracy)?,
+</span><span>            device.</span><span style="color:#96b5b4;">is_cuda</span><span>(),
+</span><span>        );
+</span><span>    }
+</span></code></pre>
+<p>Você pode ver a implementação completa em <a href="https://github.com/samuel-cavalcanti/tch-rs-example/blob/main/src/main.rs">main.rs</a></p>
+<h2 id="executando-a-aplicacao-com-cuda-no-supercomputador">Executando a aplicação com cuda no supercomputador</h2>
+<p>Atualmente o supercomputador no NPAD possui uma partição chamada <strong>gpu</strong>, nessa partição encontram-se os nós com GPUs bem potentes capazes de executar a aplicação em 1 segundo.</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#a7adba;">#!/bin/bash 
+</span><span style="color:#a7adba;">#SBATCH --job-name=neural_train
+</span><span style="color:#a7adba;">#SBATCH --time=0-0:15
+</span><span style="color:#a7adba;">#SBATCH --partition=gpu
+</span><span style="color:#a7adba;">#SBATCH --exclusive
+</span><span>
+</span><span style="color:#a7adba;"># informando ao tch-rs que desejo compilar com cuda na versão 11.7
+</span><span style="color:#b48ead;">export </span><span style="color:#bf616a;">TORCH_CUDA_VERSION</span><span>=</span><span style="color:#a3be8c;">cu117
+</span><span>
+</span><span style="color:#bf616a;">cargo</span><span> r</span><span style="color:#bf616a;"> --release
+</span></code></pre>
+<p>Cargo é o gerenciador de pacotes official da linguagem Rust, perceba que ao executar o comando <code>cargo r --release</code>. A aplicação cargo irá compilar a aplicação utilizando flags de otimização e irá executar o programa. Caso tenha compilado a aplicação no nó de login, será necessário remover a pasta <strong>target</strong>, antes de submeter o script</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#a7adba;"># rm -rf target # caso tenha compilado a aplicação no nó de login.
+</span><span>
+</span><span style="color:#bf616a;">sbatch</span><span> run_on_superpc.sh
+</span></code></pre>
+<p>o script <strong>run_on_superpc.sh</strong> pode ser encontrado <a href="https://github.com/samuel-cavalcanti/tch-rs-example/blob/main/run_on_superpc.sh">aqui</a>. Todo o projeto pode ser encontrado no github <a href="https://github.com/samuel-cavalcanti/tch-rs-example">github.com/samuel-cavalcanti/tch-rs-example</a></p>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="https://samuel-cavalcanti.github.io/Tutorials/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="https://samuel-cavalcanti.github.io/Tutorials/search_index.en.js" defer></script>
+<script type="text/javascript" src="https://samuel-cavalcanti.github.io/Tutorials/js.js" defer></script>
+
+</body>
+</html>
