@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://samuel-cavalcanti.github.io/Tutorials/main.css">
+    <link rel="icon" href="https://samuel-cavalcanti.github.io/Tutorials/npad.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>  | Copiando Arquivos através de uma Interface gráfica WinSCP (Windows) </title>
+</head>
+<body>
+
+<main>
+    
+    <nav>
+            <a href="https:&#x2F;&#x2F;samuel-cavalcanti.github.io&#x2F;Tutorials&#x2F;">
+                        <img src="https://samuel-cavalcanti.github.io/Tutorials/npad_logo.png" alt="logo"/>
+                    </a>
+                <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="avancado"
+                           />
+                    <label class="tree-toggle-label"
+                           for="avancado">avançado</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/tch-rs-tutorial/">tch-rs-example NMIST</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/openmp-tutorial/">Tutorial OpenMP</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/advanced/mpi-tutorial/">Tutorial MPI</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="iniciante"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="iniciante">iniciante</label>
+
+                    <ul class="subtree">
+                        <li class="active">
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/winscp-tutorial/">Copiando Arquivos através de uma Interface gráfica WinSCP (Windows)</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        https://samuel-cavalcanti.github.io/Tutorials/beginner/winscp-tutorial/#copiando-arquivos-atraves-de-uma-interface-grafica-winscp-windows">Copiando Arquivos através de uma Interface gráfica WinSCP (Windows)</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/winscp-tutorial/#putty">PuTTy</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/winscp-tutorial/#openssh-windows-powershell">OpenSSH + Windows PowerShell</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/winscp-tutorial/#mobaxterm">MobaXterm</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/winscp-tutorial/#informacoes-extras-sobre-a-aplicacao-utilizada">Informações extras sobre a aplicação utilizada</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            </ul>
+                                    <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/gnome-files/">Copiando Arquivos através de uma Interface gráfica Gnome Files (linux)</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/rsync-tutorial/">rsync</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/putty-tutorial/">PuTTy tutoriais</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/superpc-introduction-part-2/">Tutorial Introdução ao Supercomputador - Parte 2</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/ssh-tutorial/">Geração de chave SSH pública</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/mobaxterm-tutorial/">MobaXterm Tutoriais</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/superpc-introduction-part-1/">Tutorial Introdução ao Supercomputador parte 1</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/beginner/scp-tutorial/">scp</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="intermediario"
+                           />
+                    <label class="tree-toggle-label"
+                           for="intermediario">intermediário</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/intermediate/slurm-commands/">Tutorial de comandos do supercomputador</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/intermediate/install-apps/">Tutorial de instalação de programas no supercomputador</a>
+                            </li>
+
+                            <li >
+                                <a href="https://samuel-cavalcanti.github.io/Tutorials/intermediate/superpc-introduction-part-3/">Tutorial Introdução ao Supercomputador - Parte 3</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <h1 id="copiando-arquivos-atraves-de-uma-interface-grafica-winscp-windows">Copiando Arquivos através de uma Interface gráfica WinSCP (Windows)</h1>
+<p>Ao contrário do linux, o windows explorer não possui suporte ao <strong>scp</strong>, tendo
+que fazer uso de um programa de terceiros chamado <strong>WinSCP</strong>. Para instalar o
+WinSCP vá no <a href="https://winscp.net/eng/download.php">site oficial</a> e clique em <strong>Download</strong>. Após a finalização do download, clique no executável e instale a aplicação. Ao executar a aplicação irá aparecer a seguinte interface:</p>
+<p><img src="https://samuel-cavalcanti.github.io/Tutorials/beginner/winscp-tutorial/Tutorials/assets/winscp_tutorial/winSCP.png" alt="WinSCP" /></p>
+<ul>
+<li>
+<p><em>HostName</em> coloque: <strong>sc2.npad.ufrn.br</strong></p>
+</li>
+<li>
+<p><em>Port number</em> coloque <strong>4422</strong></p>
+</li>
+<li>
+<p><em>User name</em> coloque o seu nome de usuário</p>
+</li>
+<li>
+<p>IMPORTANTE: deixe o campo <em>Password</em> vazio</p>
+</li>
+</ul>
+<p>Depois clique em <strong>Advanced...</strong></p>
+<p><img src="https://samuel-cavalcanti.github.io/Tutorials/beginner/winscp-tutorial/Tutorials/assets/winscp_tutorial/winSCP_Advanced.png" alt="WinSCP Advanced" /></p>
+<p>Em Advanced, vá em <strong>Authentication</strong>, um submenu de <strong>SSH</strong>. Procure por <strong>Private
+key file</strong> e clique nos três pontinhos (<strong>...</strong>). Agora você precisa procurar a
+chave <strong>privada</strong> que foi criada anteriormente, no meu caso o nome dela é <strong>id_rsa</strong>.</p>
+<p><img src="https://samuel-cavalcanti.github.io/Tutorials/beginner/winscp-tutorial/Tutorials/assets/winscp_tutorial/select_file.png" alt="SELECT FILE" /></p>
+<h2 id="putty">PuTTy</h2>
+<p>Caso você esteja utilizando o <strong>Putty</strong> vá onde você salvou a chave privada pelo <strong>PuttyGen</strong>.</p>
+<h2 id="openssh-windows-powershell">OpenSSH + Windows PowerShell</h2>
+<p>Caso você tenha esteja usando OpenSSH e Windows PowerShell e não tenha mudado o nome da chave, o caminho até a chave privada é <strong>C:\Users\NomeDoSeuUsuário\.ssh\id_rsa</strong>. Para visualiza-lá terá que selecionar a opção: <strong>todos os tipos de arquivo</strong>.</p>
+<h2 id="mobaxterm">MobaXterm</h2>
+<p>No caso em que você esteja usando o MobaXterm, saiba que o local padrão em que
+o MobaXterm salva as chaves é <strong>C:\Users\NomeDoSeuUsuário\AppData\Roaming\MobaXterm\home\.ssh</strong>.  Para visualizar a chave terá que selecionar a opção: <strong>todos os tipos de arquivo</strong>.</p>
+<p>Se tudo der certo o WinSCP irá pedir para converter a Chave em formato <em>OpenSSH</em> para um formado <em>PuTTY</em> caso precise. Concorde, converta, salve e saída das configurações avançadas através do botão <strong>OK</strong>. Quando você pressionar o botão <strong>Login</strong>. Você terá acesso ao seu sistema de arquivos do supercomputador. O WinSCP irá parecer como uma dessas duas telas dependendo do layout escolhido durante a instalação.</p>
+<p><img src="https://samuel-cavalcanti.github.io/Tutorials/beginner/winscp-tutorial/Tutorials/assets/winscp_tutorial/work.png" alt="WinSCP works" /></p>
+<h2 id="informacoes-extras-sobre-a-aplicacao-utilizada">Informações extras sobre a aplicação utilizada</h2>
+<ul>
+<li><strong>WinSCP</strong>: <a href="https://winscp.net/eng/docs/start">winscp docs</a></li>
+</ul>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="https://samuel-cavalcanti.github.io/Tutorials/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="https://samuel-cavalcanti.github.io/Tutorials/search_index.en.js" defer></script>
+<script type="text/javascript" src="https://samuel-cavalcanti.github.io/Tutorials/js.js" defer></script>
+
+</body>
+</html>
